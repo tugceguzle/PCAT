@@ -8,7 +8,7 @@ const pageController = require('./controller/pageController');
 
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/pcat-test-db');
+mongoose.connect('mongodb+srv://tugce:CmVksiX5gwSDuS8d@cluster0.btezp8x.mongodb.net/?retryWrites=true&w=majority');
 
 app.set('view engine', 'ejs');
 
