@@ -4,11 +4,13 @@ const fileUpload = require('express-fileupload');
 const methodOverride = require('method-override');
 const photoController = require('./controller/photoControllers');
 const pageController = require('./controller/pageController');
+require('dotenv').config()
 
 
 const app = express();
 
-mongoose.connect('mongodb+srv://tugce:CmVksiX5gwSDuS8d@cluster0.btezp8x.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect(`mongodb+srv://tugce:${process.env.MONGO_PASSWORD}@cluster0.btezp8x.mongodb.net/?retryWrites=true&w=majority`);
+
 
 app.set('view engine', 'ejs');
 
